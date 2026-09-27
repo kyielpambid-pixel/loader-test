@@ -1,0 +1,363 @@
+local HubName = "KHUB"
+
+local SupportedGames = {
+    [17720162456]     = "https://pastefy.app/zTAmy0jy/raw",
+    [11379739543]     = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Timebomb-loader",
+    [95082159892680]  = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/%2B1speedkeyboard-loadet",
+    [3623096087]      = "https://raw.githubusercontent.com/kyielpambid-pixel/Lastest/refs/heads/main/omkhub",
+    [90438204717601]  = "https://raw.githubusercontent.com/kyielpambid-pixel/Lastest/refs/heads/main/omkhub",
+    [134424372433341] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Passorexplode-loader",
+    [133294838637122] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Soccerplayer",
+    [155615604] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Prisonlife",
+    [137233438285284] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Chickenfarm",
+    [85733030843250] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Animal-restaurant",
+    [116497287371701] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Karinderya",
+    [142823291] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/mm2",
+    [79268393072444] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Sell%20lemon",
+    [92637789841354] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Cleanallleaves",
+    [100068273119174] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Cleanallleaves",
+    [3101667897] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Legendsofspeed",
+    [114697347887839] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/%2B1speedmonkey",
+    [107778070777162] = "SPECIAL:StealAnEgg",
+    [78515283254292] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Animalhospotal",
+    [104522435597696] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Animalhospotal",
+    [114204398207377] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Survivezombiearena",
+    [86247128610772] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/lucasthouse",
+    [140418135874386] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/lucasthouse",
+    [108567435288296] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Anime-ability-arena",
+    [2753915549] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Bloxfruit",
+    [4442272183] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Bloxfruit",
+    [7449423635] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Bloxfruit",
+    [79091703265657] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Bloxfruit",
+    [116495829188952] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Deadrails",
+    [70876832253163] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Deadrails",
+    [101272402522756] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Bbq-battles",
+    [13955927965] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Blood-zone",
+    [74716719697996] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Surviveverity-area-51",
+    [118418618261207] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Runways",
+    [117311404196294] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Runways",
+    [102541290326733] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Clean-golf-yard",
+    [124597491375370] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Clean-golf-yard",
+    [96653778755193] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Clean-golf-yard",
+    [123854145273935] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Clean-golf-yard",
+    [6961824067] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Ftap",
+    [10449761463] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Tsb-farming",
+    [11729688377] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/KHUB_BoogaBooga%20(4).lua",
+    [11879754496] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/KHUB_BoogaBooga%20(4).lua",
+    [893973440] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Flee-the-facility",
+    [13772394625] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Bladeball",
+    [18687417158] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Forsaken",
+    [14259168147] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/basketball-legends",
+    [98894876188248] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Cheeting-during-testing",
+    [113447904853223] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Locust-of-mm2",
+    [137201810662528] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Locust-of-mm2",
+    [118782593215069] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/The-locust-in-the-mm2",
+    [134208374070897] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Monochrome",
+    [140466936910] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Monochrome",
+    [136533956395153] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Carl-flipper",
+    [2788229376] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Da%20hood",
+    [17625359962] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Rivals",
+    [115681808123944] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Throw-a-coin",
+    [6403373529] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Slap-battles",
+    [104973076655377] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Copybara-va-plants",
+    [109983668079237] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Steal-a-brainrot",
+    [74691681039273] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Valleyball-legends",
+    [73956553001240] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Valleyball-legends",
+    [126870639873289] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Jump-for-animals",
+    [109530157755211] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Lift-a-cube",
+    [128736949265057] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Gakuran",
+    [92648272637932] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/%2B1-mog",
+    [124216119978534] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Ride-a-pet",
+    [101304595834078] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/%2B1-tnt-mining",
+    [103854444055060] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Silent-assasin",
+    [82539019711975] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Cluck-or-hide",
+    [128448883585036] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/%2B1skinny-per-step",
+    [76377501906469] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Steal-an-anime-egg",
+    [89301804818594] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Scream-and-run",
+    [82453065586153] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Scream-and-run",
+    [112921251894333] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Scream-and-run",
+    [78418874424971] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Scream-and-run",
+    [113481077323469] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Scream-and-run",
+    [105072660911040] = "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Oil-tycoon",
+}
+
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local RunService = game:GetService("RunService")
+
+local isRunning = false
+local lastPlaceId = game.PlaceId
+
+-- Version selector (generic) - para lang sa Steal An Egg
+local function showVersionSelector(title, v1Name, v1Url, v2Name, v2Url)
+    local CoreGui = game:GetService("CoreGui")
+    
+    local SelectorGui = Instance.new("ScreenGui")
+    SelectorGui.Name = "KHUB_VersionSelector"
+    SelectorGui.Parent = CoreGui
+    SelectorGui.ResetOnSpawn = false
+    SelectorGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    
+    local Background = Instance.new("Frame")
+    Background.Size = UDim2.new(0, 300, 0, 180)
+    Background.Position = UDim2.new(0.5, -150, 0.5, -90)
+    Background.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+    Background.BorderSizePixel = 0
+    Background.Parent = SelectorGui
+    
+    local Corner = Instance.new("UICorner")
+    Corner.CornerRadius = UDim.new(0, 10)
+    Corner.Parent = Background
+    
+    local TitleLabel = Instance.new("TextLabel")
+    TitleLabel.Size = UDim2.new(1, 0, 0, 40)
+    TitleLabel.Position = UDim2.new(0, 0, 0, 10)
+    TitleLabel.BackgroundTransparency = 1
+    TitleLabel.Text = title
+    TitleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    TitleLabel.TextSize = 16
+    TitleLabel.Font = Enum.Font.GothamBold
+    TitleLabel.Parent = Background
+    
+    local V1Button = Instance.new("TextButton")
+    V1Button.Size = UDim2.new(0, 120, 0, 50)
+    V1Button.Position = UDim2.new(0, 20, 0, 70)
+    V1Button.Text = v1Name
+    V1Button.TextColor3 = Color3.fromRGB(255, 255, 255)
+    V1Button.TextSize = 16
+    V1Button.Font = Enum.Font.GothamBold
+    V1Button.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+    V1Button.BorderSizePixel = 0
+    V1Button.Parent = Background
+    
+    local V1Corner = Instance.new("UICorner")
+    V1Corner.CornerRadius = UDim.new(0, 8)
+    V1Corner.Parent = V1Button
+    
+    local V2Button = Instance.new("TextButton")
+    V2Button.Size = UDim2.new(0, 120, 0, 50)
+    V2Button.Position = UDim2.new(0, 160, 0, 70)
+    V2Button.Text = v2Name
+    V2Button.TextColor3 = Color3.fromRGB(255, 255, 255)
+    V2Button.TextSize = 16
+    V2Button.Font = Enum.Font.GothamBold
+    V2Button.BackgroundColor3 = Color3.fromRGB(180, 60, 60)
+    V2Button.BorderSizePixel = 0
+    V2Button.Parent = Background
+    
+    local V2Corner = Instance.new("UICorner")
+    V2Corner.CornerRadius = UDim.new(0, 8)
+    V2Corner.Parent = V2Button
+    
+    local function closeAndLoad(url)
+        SelectorGui:Destroy()
+        local success, scriptContent = pcall(function()
+            return game:HttpGet(url)
+        end)
+        if success and scriptContent then
+            local loadSuccess, loadError = pcall(function()
+                loadstring(scriptContent)()
+            end)
+            if not loadSuccess then
+                warn("[" .. HubName .. "] Error running script: " .. tostring(loadError))
+            end
+        else
+            warn("[" .. HubName .. "] Failed to fetch script from GitHub.")
+        end
+    end
+    
+    V1Button.MouseButton1Click:Connect(function()
+        closeAndLoad(v1Url)
+    end)
+    
+    V2Button.MouseButton1Click:Connect(function()
+        closeAndLoad(v2Url)
+    end)
+end
+
+-- Steal An Egg version selector
+local function showStealAnEggVersionSelector()
+    showVersionSelector(
+        "Steal An Egg - Version Selector",
+        "V1 (Old)",
+        "https://raw.githubusercontent.com/kyielpambid-pixel/Publichub/refs/heads/main/Stealanegg",
+        "V2 (New)",
+        "https://raw.githubusercontent.com/kyielpambid-pixel/Lastest/refs/heads/main/KHUB_StealAnEgg%20(12).lua"
+    )
+end
+
+-- Discord GUI for unsupported games (with BG image)
+local function showDiscordGUI()
+    local CoreGui = game:GetService("CoreGui")
+    
+    local DiscordGui = Instance.new("ScreenGui")
+    DiscordGui.Name = "KHUB_DiscordGUI"
+    DiscordGui.Parent = CoreGui
+    DiscordGui.ResetOnSpawn = false
+    DiscordGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    
+    local Background = Instance.new("Frame")
+    Background.Size = UDim2.new(0, 350, 0, 250)
+    Background.Position = UDim2.new(0.5, -175, 0.5, -125)
+    Background.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+    Background.BorderSizePixel = 0
+    Background.ClipsDescendants = true
+    Background.Parent = DiscordGui
+    
+    local Corner = Instance.new("UICorner")
+    Corner.CornerRadius = UDim.new(0, 12)
+    Corner.Parent = Background
+    
+    local BgImage = Instance.new("ImageLabel")
+    BgImage.Size = UDim2.new(1, 0, 1, 0)
+    BgImage.BackgroundTransparency = 1
+    BgImage.Image = "rbxassetid://127230219966945"
+    BgImage.ScaleType = Enum.ScaleType.Crop
+    BgImage.ImageTransparency = 0.35
+    BgImage.ZIndex = 0
+    BgImage.Parent = Background
+    
+    local Overlay = Instance.new("Frame")
+    Overlay.Size = UDim2.new(1, 0, 1, 0)
+    Overlay.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    Overlay.BackgroundTransparency = 0.4
+    Overlay.BorderSizePixel = 0
+    Overlay.ZIndex = 1
+    Overlay.Parent = Background
+    local OverlayCorner = Instance.new("UICorner")
+    OverlayCorner.CornerRadius = UDim.new(0, 12)
+    OverlayCorner.Parent = Overlay
+    
+    local TitleLabel = Instance.new("TextLabel")
+    TitleLabel.Size = UDim2.new(1, 0, 0, 35)
+    TitleLabel.Position = UDim2.new(0, 0, 0, 15)
+    TitleLabel.BackgroundTransparency = 1
+    TitleLabel.Text = "KHUB - Game Not Supported"
+    TitleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    TitleLabel.TextSize = 18
+    TitleLabel.Font = Enum.Font.GothamBold
+    TitleLabel.TextStrokeTransparency = 0.5
+    TitleLabel.ZIndex = 2
+    TitleLabel.Parent = Background
+    
+    local InfoLabel = Instance.new("TextLabel")
+    InfoLabel.Size = UDim2.new(1, -40, 0, 50)
+    InfoLabel.Position = UDim2.new(0, 20, 0, 55)
+    InfoLabel.BackgroundTransparency = 1
+    InfoLabel.Text = "Join our Discord to check supported games and request new scripts!"
+    InfoLabel.TextColor3 = Color3.fromRGB(230, 230, 230)
+    InfoLabel.TextSize = 14
+    InfoLabel.Font = Enum.Font.Gotham
+    InfoLabel.TextWrapped = true
+    InfoLabel.TextStrokeTransparency = 0.6
+    InfoLabel.ZIndex = 2
+    InfoLabel.Parent = Background
+    
+    local DiscordButton = Instance.new("TextButton")
+    DiscordButton.Size = UDim2.new(0, 250, 0, 50)
+    DiscordButton.Position = UDim2.new(0.5, -125, 0, 120)
+    DiscordButton.Text = "📋 Copy Discord Link"
+    DiscordButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+    DiscordButton.TextSize = 16
+    DiscordButton.Font = Enum.Font.GothamBold
+    DiscordButton.BackgroundColor3 = Color3.fromRGB(88, 101, 242)
+    DiscordButton.BorderSizePixel = 0
+    DiscordButton.ZIndex = 2
+    DiscordButton.Parent = Background
+    
+    local DiscordCorner = Instance.new("UICorner")
+    DiscordCorner.CornerRadius = UDim.new(0, 8)
+    DiscordCorner.Parent = DiscordButton
+    
+    local CloseButton = Instance.new("TextButton")
+    CloseButton.Size = UDim2.new(0, 30, 0, 30)
+    CloseButton.Position = UDim2.new(1, -40, 0, 10)
+    CloseButton.BackgroundTransparency = 1
+    CloseButton.Text = "X"
+    CloseButton.TextColor3 = Color3.fromRGB(255, 80, 80)
+    CloseButton.TextSize = 18
+    CloseButton.Font = Enum.Font.GothamBold
+    CloseButton.ZIndex = 3
+    CloseButton.Parent = Background
+    
+    local function closeGUI()
+        DiscordGui:Destroy()
+    end
+    
+    CloseButton.MouseButton1Click:Connect(closeGUI)
+    
+    DiscordButton.MouseButton1Click:Connect(function()
+        local discordLink = "https://discord.gg/rU9FyNEUQ7"
+        if setclipboard then
+            setclipboard(discordLink)
+            DiscordButton.Text = "✅ Copied!"
+            task.wait(1)
+            DiscordButton.Text = "📋 Copy Discord Link"
+        else
+            DiscordButton.Text = "discord.gg/rU9FyNEUQ7"
+        end
+    end)
+end
+
+local function runGameScript()
+    if isRunning then return end
+    isRunning = true
+
+    local currentPlaceId = game.PlaceId
+    local scriptUrl = SupportedGames[currentPlaceId]
+    
+    if scriptUrl and scriptUrl ~= "" then
+        if scriptUrl == "SPECIAL:StealAnEgg" then
+            showStealAnEggVersionSelector()
+        else
+            local success, scriptContent = pcall(function()
+                return game:HttpGet(scriptUrl)
+            end)
+
+            if success and scriptContent then
+                local loadSuccess, loadError = pcall(function()
+                    loadstring(scriptContent)()
+                end)
+                if not loadSuccess then
+                    warn("[" .. HubName .. "] Error running script: " .. tostring(loadError))
+                end
+            else
+                warn("[" .. HubName .. "] Failed to fetch script from GitHub.")
+            end
+        end
+    else
+        warn("[" .. HubName .. "] Game not supported. PlaceId: " .. tostring(currentPlaceId))
+        showDiscordGUI()
+    end
+    
+    isRunning = false
+end
+
+-- Initial run
+runGameScript()
+
+-- Watch for teleport
+LocalPlayer.OnTeleport:Connect(function(state)
+    if state == Enum.TeleportState.Started then
+        isRunning = false
+        task.wait(2)
+        runGameScript()
+    elseif state == Enum.TeleportState.Failed then
+        isRunning = false
+    end
+end)
+
+-- Fallback check every 5 seconds
+task.spawn(function()
+    while true do
+        task.wait(5)
+        if game.PlaceId ~= lastPlaceId then
+            lastPlaceId = game.PlaceId
+            isRunning = false
+            task.wait(1)
+            runGameScript()
+        end
+    end
+end)
+
+print("[" .. HubName .. "] Loader active - watching for game changes")
